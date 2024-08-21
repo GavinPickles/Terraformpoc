@@ -12,8 +12,8 @@ vsphere_datastore       = "SSD2"
 #VM
 vm_template_name = "WindowsServer"
 vm_guest_id      = "windows2019srvNext_64Guest"
-vm_vcpu          = "4"
-vm_memory        = "4096"
+vm_vcpu          = "1"
+vm_memory        = "1024"
 vm_ipv4_netmask  = "24"
 vm_ipv4_gateway  = "192.168.1.1"
 vm_dns_servers   = ["8.8.8.8", "8.8.4.4"]
