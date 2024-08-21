@@ -52,7 +52,7 @@ resource "vsphere_virtual_machine" "vm" {
         content {
           ipv4_address = network_interface.value.vm_ip
           ipv4_netmask = network_interface.value.ipv4_netmask
-          dns_server_list =  network_interface.key == 0 ? var.vm_dns_servers : null
+          dns_server_list =  network_interface.key == 0 ? var.vm_dns_servers : null // Ensures DNS settings only applied to first adapter.
         }
       }   
     }
