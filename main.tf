@@ -42,7 +42,7 @@ resource "vsphere_virtual_machine" "vm" {
     customize {
       windows_options {
         computer_name = each.value.name
-        workgroup     = var.vm_domain
+        workgroup     = var.vm_domain // Need to test with AD at the moment this just changes workgroup, rather than domain join.
       }
 
       ipv4_gateway = var.vm_ipv4_gateway
